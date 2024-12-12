@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <ul>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Дата создания</th>
+                    </tr>
+                </thead>
+                {% for snippet in snippets %}
+                    <tr>
+                        <td>{{ snippet.id }}</td>
+                        <td><a href="{% url 'view_snippet' snippet.id %}">{{ snippet.name }}</a></td>
+                        <td>{{ snippet.creation_date }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -90,4 +90,6 @@ def logout_page(request):
 
 
 def my_snippets_page(request):
-    raise NotImplementedError
+    context = get_base_context(request, 'Мои сниппеты')
+    context['snippets'] = Snippet.objects.filter(user=request.user)
+    return render(request, 'pages/my_snippets.html', context)
