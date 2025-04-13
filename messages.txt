@@ -1,0 +1,4 @@
+1. Название: messages
+2. Описание: Структура для хранения и получения временных сообщений, основанных на cookie или сессиях.
+3. Ссылка: https://docs.djangoproject.com/en/2.1/ref/contrib/messages/
+4. 
